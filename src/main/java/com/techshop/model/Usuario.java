@@ -46,7 +46,6 @@ public class Usuario implements UserDetails {
     @Enumerated(EnumType.STRING)
     @CollectionTable(name = "usuario_roles", joinColumns = @JoinColumn(name = "usuario_id_usuario"))
     @Column(name = "roles")
-    @OrderColumn(name = "id")
     private List<Role> roles = new ArrayList<>();
 
     // Ciclo de vida: Asigna la fecha automáticamente antes de guardar en la DB
